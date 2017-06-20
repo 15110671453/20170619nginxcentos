@@ -1,0 +1,5 @@
+nginx version: nginx/1.10.1
+built by gcc 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) 
+built with OpenSSL 1.0.1c 10 May 2012
+TLS SNI support enabled
+configure arguments: --sbin-path=/data/soft/nginx/nginx --conf-path=/data/soft/nginx/nginx.conf --pid-path=/data/soft/nginx/nginx.pid --with-http_ssl_module --with-pcre=/opt/pcre-8.39 --with-zlib=/opt/zlib-1.2.8 --with-openssl=/opt/openssl-1.0.1c --add-module=/data/soft/nginx/nginx-rtmp-module

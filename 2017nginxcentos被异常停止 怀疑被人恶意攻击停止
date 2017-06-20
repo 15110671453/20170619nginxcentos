@@ -1,0 +1,30 @@
+2017nginxcentos被异常停止 怀疑被人恶意攻击停止
+
+首先 检查centos 用户组设置 检查用户配置文件
+
+再者重启nginx 服务
+
+注意 在重启中 提示nginx rtmp 指令不识别
+
+使用nginx -V 检查nginx安装的配置 nginx 的版本号 以及 nginx 安装的其他模块 
+是否有异常
+
+nginx version: nginx/1.10.1
+built by gcc 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) 
+built with OpenSSL 1.0.1c 10 May 2012
+TLS SNI support enabled
+configure arguments: --sbin-path=/data/soft/nginx/nginx --conf-path=/data/soft/nginx/nginx.conf --pid-path=/data/soft/nginx/nginx.pid --with-http_ssl_module --with-pcre=/opt/pcre-8.39 --with-zlib=/opt/zlib-1.2.8 --with-openssl=/opt/openssl-1.0.1c --add-module=/data/soft/nginx/nginx-rtmp-module
+
+检查后 正常 
+
+再者检查 配置文件 发现没有问题
+
+最后解决：
+发现 由于机子被攻击 服务器 出现重启 导致原先默认保存的
+用户登录 不是我们安装nginx 等服务使用的用户
+
+这里主要是需要使用我们的超级用户来 重启nginx  否则
+
+在其他用户下 重启服务 有些模块在安装时使用的是 超级用户来安装的
+
+所以 注销 当前用户 回到 超级用户下  重启nginx 服务 成功
