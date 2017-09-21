@@ -1,0 +1,20 @@
+为CentOS云服务器配置七牛PHP服务器
+
+先安装七牛SDK composer 包管理工具
+Last login: Fri Sep 15 09:13:06 on console
+macserver1:~ admindyn$ cd Desktop/
+macserver1:Desktop admindyn$ composer require qiniu/php-sdk
+Xdebug requires Zend Engine API version 320151012.
+The Zend Engine API version 320160303 which is installed, is newer.
+Contact Derick Rethans at http://xdebug.org/docs/faq#api for a later version of Xdebug.
+
+Using version ^7.2 for qiniu/php-sdk
+./composer.json has been created
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing qiniu/php-sdk (v7.2.1)
+    Downloading: 100%         
+
+Writing lock file
+Generating autoload files
+macserver1:Desktop admindyn$ 
